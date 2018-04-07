@@ -412,9 +412,9 @@ np.random.seed(seed)
 
 
 BATCH_SIZE=128
-EPOCHS=25
-IMAGE_HEIGHT=128
-IMAGE_WIDTH=128
+EPOCHS=200
+IMAGE_HEIGHT=240
+IMAGE_WIDTH=320
 
 
 images_root = Path('flowers')
@@ -469,7 +469,7 @@ Y_train, Y_test = Y_data[:split_idx], Y_data[split_idx:]
 keras.backend.clear_session()
 
 # model execution realm
-load_flag = True
+load_flag = False
 
 if load_flag:
     model = load_model()
